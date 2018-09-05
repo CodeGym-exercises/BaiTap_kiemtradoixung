@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let input = prompt("Nhập vào một chuỗi ký tự");
+		function isPalidrome(str){
+			let n = str.length;
+			if(str==""){
+				return true;
+			}
+			if(str[0]==str[n-1]&&isPalidrome(str.substr(1,n-2))){
+					return true;
+			}else{
+				return false;
+			}
+		}
+		let result_value = isPalidrome(input);
+		if(result_value){
+			alert("true");
+		}else{
+			alert("false");
+		}
+	</script>
+</body>
+</html>
